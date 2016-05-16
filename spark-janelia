@@ -94,9 +94,9 @@ def destroy(jobId ):
                 if jobId and jobid == jobId:
                     output = subprocess.check_output(['qdel', jobid])
                     deleted += 1
-                else:
-                    output = subprocess.check_output(['qdel', jobid])
-                    deleted += 1
+#                else:
+#                    output = subprocess.check_output(['qdel', jobid])
+#                    deleted += 1
         if deleted == 0:
             print('\n')
             print >> sys.stderr, "No Spark jobs deleted, try a different jobid?"
